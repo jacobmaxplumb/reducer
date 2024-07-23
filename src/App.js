@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useReducer } from "react";
 import { Form } from "./components/Form";
+import { TodoList } from "./components/TodoList";
 
 const initalState = { count: 0 };
 
@@ -23,15 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <p>Count: {state.count}</p>
-      <button onClick={() => dispatch({ type: "INCREMENT" })}>Increment</button>
-      <button onClick={() => dispatch({ type: "DEINCREMENT" })}>
-        Deincrement
-      </button>
-      <button onClick={() => dispatch({ type: "RESET" })}>Something</button>
-      <br />
-      <br />
-      <Form />
+      <TodoList />
     </div>
   );
 }
