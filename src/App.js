@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useReducer } from "react";
+import { Form } from "./components/Form";
 
 const initalState = { count: 0 };
 
@@ -28,6 +29,9 @@ function App() {
         Deincrement
       </button>
       <button onClick={() => dispatch({ type: "RESET" })}>Something</button>
+      <br />
+      <br />
+      <Form />
     </div>
   );
 }
